@@ -1,4 +1,5 @@
 ﻿using NuGet;
+using NuGet.Versioning;
 using Splat;
 using System;
 using System.Collections.Concurrent;

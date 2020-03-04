@@ -1,5 +1,6 @@
 using Microsoft.Win32;
 using NuGet;
+using NuGet.Versioning;
 using Splat;
 using System;
 using System.Collections.Generic;
@@ -94,19 +95,10 @@ namespace Squirrel
 
         /// <summary>
         /// Creates an entry in Programs and Features based on the currently 
-        /// applied package
-        /// </summary>
-        /// <param name="uninstallCmd">The command to run to uninstall, usually update.exe --uninstall</param>
-        /// <param name="quietSwitch">The switch for silent uninstall, usually --silent</param>
-        /// <returns>The registry key that was created</returns>
-        Task<RegistryKey> CreateUninstallerRegistryEntry(string uninstallCmd, string quietSwitch);
-
-        /// <summary>
-        /// Creates an entry in Programs and Features based on the currently 
         /// applied package. Uses the built-in Update.exe to handle uninstall.
         /// </summary>
         /// <returns>The registry key that was created</returns>
-        Task<RegistryKey> CreateUninstallerRegistryEntry();
+        Task CreateUninstallerRegistryEntry();
 
         /// <summary>
         /// Removes the entry in Programs and Features created via 

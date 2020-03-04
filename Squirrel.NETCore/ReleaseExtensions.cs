@@ -1,4 +1,5 @@
 ﻿using NuGet;
+using NuGet.Versioning;
 using System.Text.RegularExpressions;
 
 namespace Squirrel
