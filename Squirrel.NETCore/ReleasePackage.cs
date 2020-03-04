@@ -126,6 +126,8 @@ namespace Squirrel
 
             var targetFramework = frameworks.Single();
 
+            NuGet.Repositories.NuGetv3LocalRepository
+
             // Recursively walk the dependency tree and extract all of the
             // dependent packages into the a temporary directory
             this.Log().Info("Creating release package: {0} => {1}", InputPackageFile, outputFile);
